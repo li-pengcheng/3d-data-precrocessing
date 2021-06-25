@@ -11,7 +11,7 @@ from time import time
 from tqdm import tqdm
 
 # 原始路径
-root_path = '/home/lipengcheng/Data/instance_CBCT/train/processed_second_coord/flip/'
+root_path = 'path'
 
 ct_dir = root_path + 'ct/'
 seg_dir = root_path + 'seg/'

@@ -1,3 +1,6 @@
+"""
+按照希望的spacing对原始图像进行插值
+"""
 import numpy as np
 import SimpleITK as sitk
 import os
@@ -26,15 +29,9 @@ def resize_image_itk(itkimage, newSpacing, resamplemethod=sitk.sitkNearestNeighb
     return itkimgResampled
 
 if __name__=="__main__":
-    # path = r'E:\03_Datasets\Tooth\CBCT\Raw\3\nii\\'
-    # savedir = r'C:\Users\lpc\Desktop\roi_ct\\'
-    # for file in os.listdir(path):
-    #     img = sitk.ReadImage(path + file)
-    #     re_img = resize_image_itk(img,[0.4,0.4,0.4])
-    #     sitk.WriteImage(re_img, savedir + file)
-    path = r'D:\CBCT\single\020\\'
-    img = sitk.ReadImage(path+'123.dcm')
-    img_arr = sitk.GetArrayFromImage(img)
-    img_new = sitk.GetImageFromArray(img_arr)
-    sitk.WriteImage(img_new, path+'//123.nii.gz')
-    # print(img_arr.shape)
+    path = '..'
+    savedir = '..'
+    for file in os.listdir(path):
+        img = sitk.ReadImage(path + file)
+        re_img = resize_image_itk(img,[0.4,0.4,0.4])
+        sitk.WriteImage(re_img, savedir + file)

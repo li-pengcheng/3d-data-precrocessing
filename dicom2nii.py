@@ -1,3 +1,6 @@
+"""
+读取具有dicom数据的文件夹并将其保存为nii
+"""
 import SimpleITK as sitk
 import numpy as np
 import os
@@ -15,9 +18,9 @@ def file_name_walk(file_dir):
                 # print(dirs)  # 有dcm的文件夹
                 # print(files) # dcm文件
                 if len(files)>50:
-                    target_path = r'D:\CBCT\series\\' + str(i).zfill(3) + '\\'
+                    target_path = r'D:\CT\series\\' + str(i).zfill(3) + '\\'
                 else:
-                    target_path = r'D:\CBCT\single\\' + str(i).zfill(3) + '\\'
+                    target_path = r'D:\CT\single\\' + str(i).zfill(3) + '\\'
                 # if not os.path.exists(target_path):
                 #     # 如果目标路径不存在原文件夹的话就创建
                 #     os.makedirs(target_path)

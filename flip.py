@@ -1,10 +1,13 @@
+"""
+按y轴对数据进行翻转
+"""
 import SimpleITK as sitk
 import numpy as np
 import os
 import shutil
 
 # 原始路径
-root_path = '/home/lipengcheng/Data/instance_CBCT/train/processed_second_coord/'
+root_path = 'path'
 
 ct_dir = root_path + 'ct/'
 seg_dir = root_path + 'seg/'

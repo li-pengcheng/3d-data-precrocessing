@@ -53,9 +53,7 @@ def compute_sdf(img_gt, out_shape):
     return normalized_sdf
 
 def covert_h5():
-    # listt = sorted(glob(r'E:\03_Datasets\Tooth\CBCT\processed\Dataset\complete2\processed\ct\*.nii.gz'))
-    # h5_savepath = r'E:\03_Datasets\Tooth\CBCT\processed\Dataset\complete2\processed\h5'
-    root_path = '/home/lipengcheng/Data/instance_CBCT/train/processed_second_coord/flip/crop/'
+    root_path = '/home/crop/'
     ct_path = root_path + '/ct/'
     listt = sorted(glob(ct_path + '*.nii.gz'))
     h5_savepath = root_path + '/h5/'
@@ -119,6 +117,6 @@ if __name__ == '__main__':
     covert_h5()
     # import h5py
     # import SimpleITK as sitk
-    # h5f = h5py.File('/home/lipengcheng/Data/processed/test/h5/volume-1001086638_20190828.h5')
+    # h5f = h5py.File('/home/volume-1001086638_20190828.h5')
     # img = h5f['image']
     # print(img.shape)
